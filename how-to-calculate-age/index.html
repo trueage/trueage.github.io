@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>How to Calculate Age: Exact Formula &amp; Step-by-Step Guide | TrueAge</title>
+  <meta name="description" content="Master how to calculate exact chronological age from date of birth. Step-by-step guide with the manual borrowing method, leap year rules, Excel formulas, and JavaScript algorithms.">
+  <meta name="keywords" content="how to calculate age, age calculation formula, calculate chronological age, exact age calculation, how to calculate age manually, leap year age formula, age in years months days">
+  <meta name="author" content="Kishara Dilshan">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://trueage.github.io/how-to-calculate-age/">
+
+  <!-- Google Tag Manager / GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-33C0NN52K8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-33C0NN52K8');
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TrueAge">
+  <meta property="og:url" content="https://trueage.github.io/how-to-calculate-age/">
+  <meta property="og:title" content="How to Calculate Age: Exact Formula &amp; Step-by-Step Guide">
+  <meta property="og:description" content="Step-by-step mathematical guide to calculating exact chronological age down to the second. Covers month-borrowing rules, leap years, Excel formulas, and JavaScript code.">
+  <meta property="og:image" content="https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png">
+  <meta property="og:image:secure_url" content="https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TrueAge How to Calculate Age Educational Guide">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Calculate Age: Exact Formula &amp; Step-by-Step Guide | TrueAge">
+  <meta name="twitter:description" content="Learn the precise calendar mathematics of calculating age from date of birth. Includes borrowing method, leap years, and code formulas.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png">
+
+  <!-- PWA & Mobile Web App -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#30AFFF">
+
+  <!-- Inline Anti-FOUC Script -->
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('trueage_theme');
+      var prefDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved ? saved : (prefDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+  </script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- JSON-LD 1: WebSite Schema (Brand Site Name) -->
+  <script type="application/ld+json" id="schema-website">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TrueAge",
+    "alternateName": ["True Age Calculator", "ExactAge"],
+    "url": "https://trueage.github.io/"
+  }
+  </script>
+
+  <!-- JSON-LD 2: BreadcrumbList Schema -->
+  <script type="application/ld+json" id="schema-breadcrumb">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://trueage.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "How to Calculate Age",
+        "item": "https://trueage.github.io/how-to-calculate-age/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD 3: TechArticle Schema -->
+  <script type="application/ld+json" id="schema-article">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Calculate Age: Exact Formula & Step-by-Step Guide",
+    "description": "Comprehensive educational guide detailing the manual calendar borrowing algorithm, Gregorian leap-year adjustments, and programming formulas to calculate exact chronological age.",
+    "url": "https://trueage.github.io/how-to-calculate-age/",
+    "image": "https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png",
+    "datePublished": "2026-01-15T08:00:00+00:00",
+    "dateModified": "2026-09-23T11:00:00+00:00",
+    "author": {
+      "@type": "Person",
+      "name": "Kishara Dilshan",
+      "url": "https://buymeacoffee.com/kisharadilz"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TrueAge",
+      "url": "https://trueage.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://trueage.github.io/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": "https://trueage.github.io/how-to-calculate-age/"
+  }
+  </script>
+
+  <!-- JSON-LD 4: HowTo Schema -->
+  <script type="application/ld+json" id="schema-howto">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Calculate Exact Chronological Age Manually",
+    "description": "Learn how to calculate exact age in years, months, and days using the calendar borrowing method.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Align Given Dates",
+        "text": "Write down both the Current Date and the Date of Birth aligned in columns: [Year, Month, Day]."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Subtract Days & Borrow Month",
+        "text": "Subtract the birth day from current day. If birth day is greater, borrow the exact number of days from the preceding month."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Subtract Months & Borrow Year",
+        "text": "Subtract the birth month from current month. If birth month is greater, borrow 12 months from the current year."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Subtract Years",
+        "text": "Subtract the birth year from the adjusted current year to obtain elapsed chronological years."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Assemble the Exact Age",
+        "text": "Combine the resulting Years, Months, and Days for your complete chronological age."
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD 5: FAQPage Schema -->
+  <script type="application/ld+json" id="schema-faq">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is dividing total days by 365 or 365.25 inaccurate for calculating age?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dividing total elapsed days by 365 or 365.25 is an estimation. Gregorian months vary from 28 to 31 days, and leap years introduce an extra day every four years (with century exceptions). Naive division often produces errors of 1 to 2 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate age if born on a leap day (February 29)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In non-leap years, legal and official jurisdictions treat February 28 or March 1 as the official anniversary. Mathematically, 1 full year elapses exactly 365 days after February 29 (which lands on March 1 in common years)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Excel formula to calculate age in Years, Months, and Days?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the DATEDIF function: =DATEDIF(A2, TODAY(), \"Y\") & \" Years, \" & DATEDIF(A2, TODAY(), \"YM\") & \" Months, \" & DATEDIF(A2, TODAY(), \"MD\") & \" Days\", where A2 is the cell containing the birth date."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand-group">
+        <a href="../" class="brand-link" aria-label="TrueAge Home Calculator">
+          <svg class="brand-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="70 20"/>
+            <circle cx="16" cy="16" r="8" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M16 8V16L21 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+          </svg>
+          <span class="brand-title">TrueAge</span>
+        </a>
+      </div>
+
+      <div class="nav-controls">
+        <a href="../" class="btn-tool" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem; padding: 0.45rem 0.9rem; font-size: 0.85rem; font-weight:700; color:var(--text-primary); border:1px solid var(--border-light); border-radius:var(--radius-pill);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          Live Calculator
+        </a>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button type="button" class="btn-tool" id="themeToggleBtn" aria-label="Toggle visual theme" title="Toggle theme">
+          <svg class="icon-theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Support Developer Link -->
+        <a href="https://buymeacoffee.com/kisharadilz" target="_blank" rel="noopener noreferrer" class="btn-support" aria-label="Support Developer on Buy Me a Coffee">
+          <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+          <span class="btn-support-text">Support</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Layout -->
+  <main class="article-container">
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="../">Home</a>
+      <span class="breadcrumb-separator">/</span>
+      <span aria-current="page">How to Calculate Age</span>
+    </nav>
+
+    <!-- Article Hero Header -->
+    <header class="article-hero">
+      <div class="article-badge-row">
+        <span class="article-category-badge">Mathematical Guide</span>
+        <span class="article-read-time">⏱ 6 min read • Updated September 2026</span>
+      </div>
+      <h1 class="article-title">How to Calculate Age: Exact Formula &amp; Step-by-Step Guide</h1>
+      <p class="article-subtitle">
+        Master the precise mathematical algorithms of chronological age calculation. Learn the calendar borrowing method, Gregorian leap-year adjustments, and programming formulas in Excel, JavaScript, and Python.
+      </p>
+
+      <div class="article-meta-bar">
+        <div class="article-author">
+          <div class="author-avatar">KD</div>
+          <div>
+            <div>Written by <strong>Kishara Dilshan</strong></div>
+            <div style="font-size:0.75rem; color:var(--text-muted)">Lead Technical Architect at TrueAge</div>
+          </div>
+        </div>
+        <div>
+          <a href="../" class="btn-cta-launch" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+            Jump to 60FPS Calculator →
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="article-body">
+
+      <!-- Key Takeaways Callout Box -->
+      <div class="article-callout tip">
+        <div class="callout-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Quick Takeaways: Key Rules for Exact Age
+        </div>
+        <div class="callout-body">
+          <ul style="margin:0; padding-left:1.25rem;">
+            <li><strong>Calendar Breakdown:</strong> Chronological age requires decomposing elapsed time into <strong>Years, Months, and Days</strong> rather than decimal years.</li>
+            <li><strong>The Borrowing Principle:</strong> When the current day is smaller than your birth day, borrow the <em>exact number of days of the previous calendar month</em> (28, 29, 30, or 31), not an average 30.4.</li>
+            <li><strong>Leap Years:</strong> February contains 29 days in years divisible by 4, except century years unless divisible by 400 (e.g., 2000 was a leap year, 1900 was not).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>1. The Mathematical Challenge: Why Simple Division Fails</h2>
+      <p>
+        The most common mistake when calculating age is dividing the total number of days elapsed by <code>365</code> or <code>365.25</code>:
+      </p>
+      
+      <div class="math-diagram-box">
+        // Naive Estimation Formula (Inaccurate)
+        Age ≈ (Current Date - Birth Date in Days) / 365.25
+      </div>
+
+      <p>
+        While this provides a rough decimal estimate (e.g., <code>28.42 years</code>), it fails to answer standard civic and biological questions such as: <em>"How many years, months, and days old am I?"</em>.
+      </p>
+      <p>
+        Because the Gregorian calendar features months with fluctuating lengths (28, 29, 30, and 31 days) and irregular leap years, naive division frequently produces an error of <strong>1 to 2 full days</strong>. Exact chronological age requires column subtraction with dynamic calendar borrowing.
+      </p>
+
+      <h2>2. Step-by-Step Manual Method: The Calendar Borrowing Algorithm</h2>
+      <p>
+        To calculate your exact age manually on paper or in code, follow this standardized 5-step arithmetic algorithm:
+      </p>
+
+      <div class="steps-container">
+
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">1</div>
+            <h3 class="step-card-title">Align the Current Date and Date of Birth</h3>
+          </div>
+          <div class="step-card-content">
+            Write down the <strong>Current Date</strong> on top and the <strong>Date of Birth</strong> underneath, ordered from largest to smallest unit: <code>[Year] - [Month] - [Day]</code>.
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">2</div>
+            <h3 class="step-card-title">Subtract the Days (With Month Borrowing)</h3>
+          </div>
+          <div class="step-card-content">
+            <p>Subtract the Birth Day from the Current Day:</p>
+            <ul>
+              <li>If <code>Current Day &ge; Birth Day</code>: Perform simple subtraction: <code>Result Days = Current Day - Birth Day</code>.</li>
+              <li>If <code>Current Day &lt; Birth Day</code>: You must <strong>borrow 1 month</strong> from the Current Month column. Add the <em>exact number of days in the preceding month</em> to the Current Day, then subtract. Deduct 1 from the Current Month.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">3</div>
+            <h3 class="step-card-title">Subtract the Months (With Year Borrowing)</h3>
+          </div>
+          <div class="step-card-content">
+            <p>Subtract the Birth Month from the (adjusted) Current Month:</p>
+            <ul>
+              <li>If <code>Current Month &ge; Birth Month</code>: <code>Result Months = Current Month - Birth Month</code>.</li>
+              <li>If <code>Current Month &lt; Birth Month</code>: Borrow <strong>1 year (12 months)</strong> from the Current Year column. Add 12 to the Current Month, then subtract. Deduct 1 from the Current Year.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">4</div>
+            <h3 class="step-card-title">Subtract the Years</h3>
+          </div>
+          <div class="step-card-content">
+            Subtract the Birth Year from the (adjusted) Current Year: <code>Result Years = Current Year - Birth Year</code>.
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">5</div>
+            <h3 class="step-card-title">Incorporate Exact Time (Hours, Minutes, Seconds)</h3>
+          </div>
+          <div class="step-card-content">
+            For second-level precision, compute the time difference between your birth moment and the current system time. If the current time of day is earlier than the birth time, borrow 1 day (24 hours), adjust your day tally, and proceed down through minutes and seconds.
+          </div>
+        </div>
+
+      </div>
+
+      <h2>3. Real-World Practical Examples</h2>
+
+      <h3>Example A: Simple Subtraction (No Borrowing Required)</h3>
+      <p>
+        Assume the Current Date is <strong>October 25, 2026</strong> and the Date of Birth is <strong>June 12, 1998</strong>.
+      </p>
+
+      <div class="math-diagram-box">
+        Years   Months   Days
+         2026     10      25   (Current Date: Oct 25, 2026)
+       - 1998     06      12   (Birth Date:   Jun 12, 1998)
+       ---------------------
+           28      4      13   → Exactly 28 Years, 4 Months, 13 Days old.
+      </div>
+
+      <h3>Example B: Complex Subtraction (Borrowing Days &amp; Months Across February)</h3>
+      <p>
+        Assume the Current Date is <strong>March 14, 2026</strong> and the Date of Birth is <strong>November 28, 2002</strong>.
+      </p>
+
+      <div class="math-diagram-box">
+        Step 1: Days Column (14 - 28)
+          Since 14 &lt; 28, borrow from preceding month (February 2026).
+          2026 is a common year, so February has 28 days.
+          Adjusted Days = 14 + 28 = 42 days.
+          Days = 42 - 28 = 14 Days.
+          Current Months becomes 3 - 1 = 2 (February).
+
+        Step 2: Months Column (2 - 11)
+          Since 2 &lt; 11, borrow 1 Year (12 Months) from 2026.
+          Adjusted Months = 2 + 12 = 14 Months.
+          Months = 14 - 11 = 3 Months.
+          Current Year becomes 2026 - 1 = 2025.
+
+        Step 3: Years Column (2025 - 2002)
+          Years = 2025 - 2002 = 23 Years.
+
+        Final Result: Exactly 23 Years, 3 Months, 14 Days old.
+      </div>
+
+      <h2>4. The Gregorian Leap Year Rules</h2>
+      <p>
+        The Earth takes approximately <code>365.24219 solar days</code> to orbit the Sun. To keep the civil calendar synchronized with astronomical seasons, the Gregorian calendar uses an algorithm defined in 1582:
+      </p>
+
+      <div class="article-callout">
+        <div class="callout-title">The Three Leap Year Test Conditions</div>
+        <div class="callout-body">
+          <ol style="margin:0; padding-left:1.25rem;">
+            <li>Every year that is exactly divisible by <strong>4</strong> is a leap year...</li>
+            <li><strong>Except</strong> for years that are exactly divisible by <strong>100</strong> (century years)...</li>
+            <li><strong>Unless</strong> the year is also exactly divisible by <strong>400</strong>.</li>
+          </ol>
+        </div>
+      </div>
+
+      <p>
+        Therefore, the year <strong>2000</strong> was a leap year (divisible by 400), whereas <strong>1900</strong> and <strong>2100</strong> are common years (divisible by 100 but not 400). When computing age across February 29th, the algorithm must verify whether the specific year traversed was a leap year.
+      </p>
+
+      <h2>5. Code &amp; Spreadsheet Formulas</h2>
+
+      <h3>Excel &amp; Google Sheets Formula</h3>
+      <p>
+        In modern spreadsheets, the undocumented but robust <code>DATEDIF</code> function calculates exact elapsed units:
+      </p>
+
+      <div class="code-container">
+        <div class="code-header">Excel / Google Sheets Formula</div>
+        <pre><code>=DATEDIF(A2, TODAY(), "Y") &amp; " Years, " &amp; 
+ DATEDIF(A2, TODAY(), "YM") &amp; " Months, " &amp; 
+ DATEDIF(A2, TODAY(), "MD") &amp; " Days"</code></pre>
+      </div>
+      <p style="font-size:0.875rem; color:var(--text-muted)">
+        <em>Note: Replace <code>A2</code> with the cell reference holding your birth date. <code>"YM"</code> calculates remaining months excluding years; <code>"MD"</code> calculates remaining days excluding months.</em>
+      </p>
+
+      <h3>JavaScript ES6 Algorithm (Exact Calendar Math)</h3>
+      <p>
+        Here is the production-grade calendar math algorithm used by the <strong>TrueAge</strong> engine:
+      </p>
+
+      <div class="code-container">
+        <div class="code-header">JavaScript (ES6)</div>
+        <pre><code>function calculateExactAge(birthDate, targetDate = new Date()) {
+  let y1 = birthDate.getFullYear(), m1 = birthDate.getMonth(), d1 = birthDate.getDate();
+  let y2 = targetDate.getFullYear(), m2 = targetDate.getMonth(), d2 = targetDate.getDate();
+
+  let days = d2 - d1;
+  let months = m2 - m1;
+  let years = y2 - y1;
+
+  if (days &lt; 0) {
+    // Borrow days from the previous month of targetDate
+    const prevMonthDays = new Date(y2, m2, 0).getDate();
+    days += prevMonthDays;
+    months--;
+  }
+
+  if (months &lt; 0) {
+    // Borrow 12 months from target year
+    months += 12;
+    years--;
+  }
+
+  return { years, months, days };
+}
+
+// Example usage:
+const age = calculateExactAge(new Date(1995, 4, 15));
+console.log(`${age.years} Years, ${age.months} Months, ${age.days} Days`);</code></pre>
+      </div>
+
+      <!-- Interactive Call to Action Banner -->
+      <div class="article-cta-box">
+        <h2 class="article-cta-title">See Your Exact Age Ticking in Real-Time</h2>
+        <p class="article-cta-desc">
+          Why calculate by hand? TrueAge tracks your age down to the millisecond with a buttery smooth 60FPS chronometer, quirky milestone countdowns, and planetary orbits.
+        </p>
+        <a href="../" class="btn-cta-launch">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Open TrueAge 60FPS Calculator
+        </a>
+      </div>
+
+      <h2>6. Cumulative Lifetime Units &amp; Planetary Conversions</h2>
+      <p>
+        Beyond standard years and months, chronological age can be converted into cumulative lifetime totals:
+      </p>
+
+      <div class="article-table-wrap">
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Conversion Formula</th>
+              <th>Average for a 30-Year-Old</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Total Days</strong></td>
+              <td><code>Total Milliseconds / 86,400,000</code></td>
+              <td>~10,958 Days</td>
+            </tr>
+            <tr>
+              <td><strong>Total Hours</strong></td>
+              <td><code>Total Days &times; 24</code></td>
+              <td>~263,000 Hours</td>
+            </tr>
+            <tr>
+              <td><strong>Total Seconds</strong></td>
+              <td><code>Total Days &times; 86,400</code></td>
+              <td>~946,700,000 Seconds</td>
+            </tr>
+            <tr>
+              <td><strong>Estimated Heartbeats</strong></td>
+              <td><code>Total Minutes &times; ~75 bpm</code></td>
+              <td>~1.18 Billion Beats</td>
+            </tr>
+            <tr>
+              <td><strong>Martian Age</strong></td>
+              <td><code>Earth Years / 1.8808</code></td>
+              <td>~15.95 Martian Years</td>
+            </tr>
+            <tr>
+              <td><strong>Jupiter Age</strong></td>
+              <td><code>Earth Years / 11.862</code></td>
+              <td>~2.53 Jovian Years</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>7. Frequently Asked Questions (FAQ)</h2>
+
+      <div class="faq-list" style="margin-top:1.5rem;">
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Why is dividing total days by 365 or 365.25 inaccurate?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Dividing total elapsed days by 365 or 365.25 is an approximation. Gregorian months vary from 28 to 31 days, and leap years introduce an extra day every four years. Naive decimal division cannot correctly decompose birthdays into civil years, months, and days.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do you calculate age for someone born on Leap Day (February 29)?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>In common non-leap years, different legal jurisdictions recognize either February 28 or March 1 as the official anniversary. Mathematically, 1 astronomical year has passed after exactly 365 days, which places the non-leap anniversary at March 1.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What is the difference between chronological age and biological age?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Chronological age is the exact astronomical time elapsed since your birth date. Biological age refers to cellular and physiological health markers (such as DNA methylation and telomere length), which can be younger or older than chronological time.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How does TrueAge keep the age counter ticking at 60 frames per second?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>TrueAge uses the browser's native <code>requestAnimationFrame</code> loop combined with cached DOM selectors. It recalculates the millisecond difference on every frame and safely updates only the specific text nodes that have changed, ensuring zero layout thrashing.</p>
+          </div>
+        </details>
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="brand-link">
+            <span class="brand-title">TrueAge</span>
+          </a>
+          <p>The high-precision, 100% client-side chronological age calculator and life milestone tracker. Free, open, and private.</p>
+        </div>
+
+        <div class="footer-locales">
+          <div class="locale-title">Navigation &amp; Tools</div>
+          <div class="locale-links">
+            <a href="../" class="locale-link">Age Calculator</a>
+            <a href="./" class="locale-link active">How to Calculate Age Guide</a>
+            <a href="https://buymeacoffee.com/kisharadilz" target="_blank" rel="noopener noreferrer" class="locale-link">Support Developer ☕</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> TrueAge. All rights reserved. 100% Client-Side.
+        </div>
+        <div class="footer-credit">
+          Educational Guide by <a href="https://buymeacoffee.com/kisharadilz" target="_blank" rel="noopener noreferrer">Kishara Dilshan</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Light/Dark Mode Theme Handler Script -->
+  <script>
+  (function() {
+    var themeBtn = document.getElementById('themeToggleBtn');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try {
+          localStorage.setItem('trueage_theme', next);
+        } catch (e) {}
+      });
+    }
+
+    var yr = document.getElementById('currentYear');
+    if (yr) yr.textContent = new Date().getFullYear();
+  })();
+  </script>
+</body>
+</html>
