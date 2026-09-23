@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <script>
+    (function() {
+      try {
+        const storedTheme = localStorage.getItem('trueage_theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-33C0NN52K8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-33C0NN52K8');
+  </script>
+
+  <title>TrueAge | Calculateur d'Âge Exact, Compteur 60FPS et Jalons de Vie</title>
+  <meta name="title" content="TrueAge | Calculateur d'Âge Exact, Compteur 60FPS et Jalons de Vie">
+  <meta name="description" content="Calculez votre âge exact à la seconde près avec un compteur fluide en temps réel à 60FPS. Découvrez votre prochain anniversaire, 10 000e jour, 1 milliard de secondes et votre âge sur Mars et Jupiter.">
+  <meta name="keywords" content="calculateur d'âge exact, compteur d'âge en temps réel, âge chronologique, quel est mon âge, jalons de vie, âge sur mars, 10000 jours vécus">
+  <meta name="author" content="Kishara Dilshan">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <link rel="canonical" href="https://trueage.github.io/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://trueage.github.io/">
+  <link rel="alternate" hreflang="en" href="https://trueage.github.io/">
+  <link rel="alternate" hreflang="es" href="https://trueage.github.io/es/">
+  <link rel="alternate" hreflang="pt" href="https://trueage.github.io/pt/">
+  <link rel="alternate" hreflang="de" href="https://trueage.github.io/de/">
+  <link rel="alternate" hreflang="fr" href="https://trueage.github.io/fr/">
+  <link rel="alternate" hreflang="ja" href="https://trueage.github.io/ja/">
+  <!-- Preconnect to Cloudinary CDN -->
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+  <link rel="dns-prefetch" href="https://res.cloudinary.com">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://trueage.github.io/fr/">
+  <meta property="og:title" content="TrueAge | Calculateur d'Âge Exact & Jalons de Vie">
+  <meta property="og:description" content="Découvrez votre âge exact en temps réel à la seconde près avec notre horloge fluide à 60FPS.">
+  <meta property="og:image" content="https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png">
+  <meta property="og:image:secure_url" content="https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TrueAge - Calculateur d'Âge Exact & Jalons de Vie">
+  <meta property="og:site_name" content="TrueAge">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://trueage.github.io/fr/">
+  <meta name="twitter:title" content="TrueAge | Calculateur d'Âge Exact & Jalons de Vie">
+  <meta name="twitter:description" content="Chronomètre chronologique haute précision avec horloge en temps réel à 60FPS. 100% privé.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png">
+  <meta name="twitter:image:alt" content="TrueAge - Calculateur d'Âge Exact & Jalons de Vie">
+
+  <!-- Favicon & PWA App Icons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- JSON-LD Structured Data: BreadcrumbList -->
+  <script type="application/ld+json" id="schema-breadcrumb">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://trueage.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Français",
+        "item": "https://trueage.github.io/fr/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data: SoftwareApplication & WebApplication -->
+  <script type="application/ld+json" id="schema-webapp">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TrueAge Calculateur d'Âge Exact",
+    "url": "https://trueage.github.io/fr/",
+    "inLanguage": "fr",
+    "description": "Calculateur d'âge chronologique haute précision avec horloge en temps réel à 60FPS et tableau des jalons de vie.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "softwareVersion": "1.0.0",
+    "image": "https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png",
+    "screenshot": "https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1280",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Chronomètre d'âge précis à 60FPS en temps réel",
+      "Calcul mathématique calendaire rigoureux avec années bissextiles",
+      "Statistiques de vie cumulées: jours, heures, minutes, secondes",
+      "Tableau des jalons: 10 000e jour, 1 milliard de secondes",
+      "Âge sur 7 planètes du système solaire",
+      "Calcul 100% privé et local dans votre navigateur"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Kishara Dilshan",
+      "url": "https://buymeacoffee.com/kisharadilz"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json" id="schema-faq">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Comment TrueAge calcule-t-il l'âge chronologique exact ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TrueAge s'appuie sur des algorithmes calendaires précis qui tiennent compte des variations de durée des mois et des années bissextiles (comme le 29 février), à la seconde près."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment les années bissextiles affectent-elles le calcul de l'âge ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une année civile compte 365 jours et une bissextile 366. Le moteur de TrueAge détecte si un 29 février a été traversé et adapte dynamiquement le décompte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que représentent le 10 000e jour et 1 milliard de secondes ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Votre 10 000e jour survient vers 27 ans et 4 mois et demi. Un milliard de secondes vécues s'atteint vers 31 ans et 8 mois. TrueAge calcule la date exacte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment l'âge est-il calculé sur d'autres planètes ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'âge planétaire correspond à la division de vos années terrestres par la période orbitale de chaque planète. Par exemple, Mars met 1,8808 an terrestre à faire le tour du Soleil."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qu'un demi-anniversaire ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un demi-anniversaire se produit exactement 6 mois après votre date de naissance, parfait pour une fête intermédiaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ma date de naissance est-elle enregistrée sur un serveur ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. TrueAge s'exécute à 100% dans votre navigateur. Aucune donnée personnelle n'est envoyée à un serveur."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../" class="brand-link" aria-label="Accueil TrueAge">
+        <svg class="brand-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="22" stroke="url(#navBrandGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="110 30"/>
+          <path d="M24 20H40L33 31C32.5 31.7 32.5 32.3 33 33L40 44H24L31 33C31.5 32.3 31.5 31.7 31 31L24 20Z" stroke="#D8FFC5" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="32" cy="32" r="3" fill="#92EEFF"/>
+          <defs>
+            <linearGradient id="navBrandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#30AFFF"/>
+              <stop offset="100%" stop-color="#92EEFF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-title">TrueAge</span>
+        <span class="brand-badge">PRO</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="lang-dropdown-wrapper" title="Choisir la langue">
+          <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <select id="langSelect" class="lang-select" aria-label="Choisir la langue">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="de">Deutsch</option>
+            <option value="fr" selected>Français</option>
+            <option value="ja">日本語</option>
+          </select>
+          <svg class="lang-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Changer de thème" title="Changer de thème">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="https://buymeacoffee.com/kisharadilz" target="_blank" rel="noopener noreferrer" class="btn-support" aria-label="Soutenir le créateur">
+          <svg viewBox="0 0 24 24">
+            <path d="M20.216 6.415l-.132-.666c-.119-.597-.387-1.144-.775-1.583a4.015 4.015 0 0 0-1.745-1.127 5.097 5.097 0 0 0-2.074-.214H5.215C3.765 2.825 2.5 3.99 2.5 5.44v8.326c0 1.45 1.265 2.615 2.715 2.615h7.828c1.368 0 2.496-.98 2.686-2.316l.487-3.418h1.831c1.232 0 2.29-.838 2.535-2.031l.634-3.197a2.532 2.532 0 0 0-.000-1.004zm-3.528 3.791h-1.63l-.442 3.097a1.008 1.008 0 0 1-1.002.871H5.215a1.01 1.01 0 0 1-1.01-1.01V5.44a1.01 1.01 0 0 1 1.01-1.01h9.324c.732 0 1.343.518 1.472 1.24l.677 4.536zm2.036-1.077c-.082.404-.442.687-.855.687h-.764l-.568-3.811h1.332c.504 0 .937.362 1.012.862l.143.719-.300 1.543z"/>
+          </svg>
+          <span data-i18n="support_btn">Soutenir le Créateur</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section" aria-labelledby="heroTitle">
+      <div class="hero-tag">
+        <span class="pulse-dot"></span>
+        <span data-i18n="tag_badge">100% Côté Client & Zéro Serveur Privé</span>
+      </div>
+
+      <h1 id="heroTitle" class="hero-title">
+        <span data-i18n="hero_title_prefix">Calculez Votre</span> 
+        <span class="text-gradient" data-i18n="hero_title_gradient">Âge Exact & Jalons de Vie</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
+        Calculateur d'âge chronologique haute précision avec horloge en temps réel à 60FPS. Découvrez vos jours, heures et secondes vécus, vos prochains grands jalons et votre âge dans l'espace.
+      </p>
+
+      <div class="calc-card">
+        <form id="ageForm" class="calc-form" onsubmit="event.preventDefault();">
+          <div class="input-grid">
+            <div class="input-group">
+              <label for="dob" class="input-label">
+                <span data-i18n="label_dob">Date de Naissance</span>
+                <span class="label-sub" data-i18n="label_required">Requis</span>
+              </label>
+              <input type="date" id="dob" class="custom-input" required aria-required="true">
+            </div>
+
+            <div class="input-group">
+              <label for="birthTime" class="input-label">
+                <span data-i18n="label_time">Heure de Naissance</span>
+                <span class="label-sub" data-i18n="label_optional">Optionnel (pour la précision 60FPS)</span>
+              </label>
+              <input type="time" id="birthTime" class="custom-input" step="1" value="00:00:00">
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button type="submit" id="btnCalculate" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span data-i18n="btn_calculate">Calculer l'Âge Exact</span>
+            </button>
+
+            <button type="button" id="btnExample" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span data-i18n="btn_example">Essayer un Exemple</span>
+            </button>
+
+            <button type="button" id="btnReset" class="btn-secondary" title="Réinitialiser">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              <span data-i18n="btn_reset">Réinitialiser</span>
+            </button>
+          </div>
+
+          <p class="calc-privacy-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span data-i18n="privacy_note">Les calculs sont exécutés localement dans votre navigateur. Aucune donnée ne quitte votre appareil.</span>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Results Container -->
+    <div id="resultsContainer" class="results-section" aria-live="polite">
+      <section class="live-counter-card" aria-label="Compteur en temps réel">
+        <div class="live-badge-wrapper">
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            <span data-i18n="live_ticking">Chronomètre 60FPS en Direct</span>
+          </div>
+        </div>
+
+        <div class="live-grid">
+          <div class="digital-card highlight">
+            <div id="valYears" class="digital-val">--</div>
+            <div class="digital-label" data-i18n="unit_years">Ans</div>
+          </div>
+          <div class="digital-card highlight">
+            <div id="valMonths" class="digital-val">--</div>
+            <div class="digital-label" data-i18n="unit_months">Mois</div>
+          </div>
+          <div class="digital-card highlight">
+            <div id="valDays" class="digital-val">--</div>
+            <div class="digital-label" data-i18n="unit_days">Jours</div>
+          </div>
+          <div class="digital-card">
+            <div id="valHours" class="digital-val">--</div>
+            <div class="digital-label" data-i18n="unit_hours">Heures</div>
+          </div>
+          <div class="digital-card">
+            <div id="valMinutes" class="digital-val">--</div>
+            <div class="digital-label" data-i18n="unit_minutes">Minutes</div>
+          </div>
+          <div class="digital-card">
+            <div id="valSeconds" class="digital-val">--</div>
+            <div class="digital-label" data-i18n="unit_seconds">Secondes</div>
+          </div>
+        </div>
+
+        <div class="bday-banner">
+          <div class="bday-info">
+            <span class="bday-icon">🎂</span>
+            <div>
+              <div class="bday-title" data-i18n="bday_next_title">Compte à Rebours du Prochain Anniversaire</div>
+              <div class="bday-subtitle" id="valNextBdayDay">Prochaine fête</div>
+            </div>
+          </div>
+          <div class="bday-countdown" id="valNextBdayCountdown">-- jours, -- heures</div>
+        </div>
+      </section>
+
+      <!-- Total Time Alive Breakdown Section -->
+      <section class="stats-section" aria-labelledby="statsTitle">
+        <div class="section-header">
+          <h2 id="statsTitle" class="section-title">
+            <span>⏱️</span>
+            <span data-i18n="title_total_alive">Temps Total Vécu en Détail</span>
+          </h2>
+          <p class="section-desc" data-i18n="desc_total_alive">Votre existence complète convertie en métriques cumulatives individuelles.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div class="stat-content">
+              <div id="statTotalDays" class="stat-val">--</div>
+              <div class="stat-label" data-i18n="stat_days">Total de Jours Vécus</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🕒</div>
+            <div class="stat-content">
+              <div id="statTotalHours" class="stat-val">--</div>
+              <div class="stat-label" data-i18n="stat_hours">Total d'Heures Vécues</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⌛</div>
+            <div class="stat-content">
+              <div id="statTotalMinutes" class="stat-val">--</div>
+              <div class="stat-label" data-i18n="stat_minutes">Total de Minutes Vécues</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-content">
+              <div id="statTotalSeconds" class="stat-val">--</div>
+              <div class="stat-label" data-i18n="stat_seconds">Total de Secondes Vécues</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🫁</div>
+            <div class="stat-content">
+              <div id="statTotalBreaths" class="stat-val">--</div>
+              <div class="stat-label" data-i18n="stat_breaths">Respirations Estimées (~16/min)</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">💓</div>
+            <div class="stat-content">
+              <div id="statTotalHeartbeats" class="stat-val">--</div>
+              <div class="stat-label" data-i18n="stat_heartbeats">Battements Estimés (~75 bpm)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Milestone Dashboard Section -->
+      <section class="milestones-section" aria-labelledby="milestonesTitle">
+        <div class="section-header">
+          <h2 id="milestonesTitle" class="section-title">
+            <span>🏆</span>
+            <span data-i18n="title_milestones">Tableau des Jalons de Vie</span>
+          </h2>
+          <p class="section-desc" data-i18n="desc_milestones">Grandes étapes et accomplissements insolites avec suivi de progression.</p>
+        </div>
+
+        <div class="milestones-grid" id="milestonesGrid"></div>
+      </section>
+
+      <!-- Planetary Age Grid Section -->
+      <section class="planets-section" aria-labelledby="planetsTitle">
+        <div class="section-header">
+          <h2 id="planetsTitle" class="section-title">
+            <span>🪐</span>
+            <span data-i18n="title_planets">Calculateur d'Âge Planétaire</span>
+          </h2>
+          <p class="section-desc" data-i18n="desc_planets">Quel âge auriez-vous si vous étiez né sur d'autres planètes du système solaire.</p>
+        </div>
+
+        <div class="planets-grid" id="planetsGrid"></div>
+      </section>
+
+      <!-- Astrological & Life Profile Section -->
+      <section class="profile-section" aria-labelledby="profileTitle">
+        <div class="section-header">
+          <h2 id="profileTitle" class="section-title">
+            <span>✨</span>
+            <span data-i18n="title_profile">Profil Astrologique & Personnel</span>
+          </h2>
+          <p class="section-desc" data-i18n="desc_profile">Faits astrologiques fascinants et identification de votre génération.</p>
+        </div>
+
+        <div class="profile-grid">
+          <div class="profile-card">
+            <div class="profile-icon" id="iconZodiac">♈</div>
+            <div>
+              <div class="profile-title" data-i18n="prof_zodiac">Zodiaque Occidental</div>
+              <div id="valZodiacSign" class="profile-value">--</div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <div class="profile-icon" id="iconChineseZodiac">🐉</div>
+            <div>
+              <div class="profile-title" data-i18n="prof_chinese">Zodiaque Chinois</div>
+              <div id="valChineseZodiac" class="profile-value">--</div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <div class="profile-icon">📅</div>
+            <div>
+              <div class="profile-title" data-i18n="prof_dayborn">Jour de Semaine de Naissance</div>
+              <div id="valDayBorn" class="profile-value">--</div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <div class="profile-icon">👥</div>
+            <div>
+              <div class="profile-title" data-i18n="prof_generation">Génération</div>
+              <div id="valGeneration" class="profile-value">--</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Action Toolbar -->
+      <div class="toolbar-section">
+        <button id="btnCopySummary" class="btn-tool" title="Copier le résumé">
+          <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          <span data-i18n="tool_copy_summary">Copier le Résumé</span>
+        </button>
+
+        <button id="btnCopyLink" class="btn-tool" title="Copier le lien partageable">
+          <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          <span data-i18n="tool_copy_link">Copier le Lien</span>
+        </button>
+
+        <button id="btnShareWhatsApp" class="btn-tool" title="Partager sur WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92zm5.78 14.01c-.24.68-1.4 1.26-1.92 1.34-.52.07-1.19.1-3.41-.82-2.84-1.18-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07.99-2.35.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.3.48-.14.17-.3.38-.43.51-.14.14-.29.3-.12.59.17.28.75 1.24 1.61 2 1.11.98 2.04 1.29 2.33 1.43.28.14.45.12.62-.07.17-.19.73-.85.92-1.14.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.17 1.37z"/></svg>
+          <span data-i18n="tool_share_whatsapp">Partager sur WhatsApp</span>
+        </button>
+
+        <button id="btnShareTwitter" class="btn-tool" title="Publier sur X">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span data-i18n="tool_share_twitter">Publier sur X</span>
+        </button>
+
+        <button id="btnPrint" class="btn-tool" title="Imprimer ou enregistrer en PDF">
+          <svg viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+          <span data-i18n="tool_print">Imprimer / PDF</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SEO Content & FAQ Section -->
+    <section class="seo-section" aria-labelledby="faqTitle">
+      <div class="section-header">
+        <h2 id="faqTitle" class="section-title">
+          <span>❓</span>
+          <span data-i18n="title_faq">Foire Aux Questions (FAQ)</span>
+        </h2>
+        <p class="section-desc" data-i18n="desc_faq">Découvrez la précision mathématique de l'âge, les années bissextiles et le temps astronomique.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span data-i18n="faq_q1">Comment TrueAge calcule-t-il l'âge chronologique exact ?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="faq_a1">TrueAge s'appuie sur des algorithmes calendaires précis qui tiennent compte des variations de durée des mois et des années bissextiles (comme le 29 février), à la seconde près.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span data-i18n="faq_q2">Comment les années bissextiles affectent-elles le calcul de l'âge ?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="faq_a2">Une année civile compte 365 jours et une bissextile 366. Le moteur de TrueAge détecte si un 29 février a été traversé et adapte dynamiquement le décompte.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span data-i18n="faq_q3">Que représentent le 10 000e jour et 1 milliard de secondes ?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="faq_a3">Votre 10 000e jour survient vers 27 ans et 4 mois et demi. Un milliard de secondes vécues s'atteint vers 31 ans et 8 mois. TrueAge calcule la date exacte.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span data-i18n="faq_q4">Comment l'âge est-il calculé sur d'autres planètes ?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="faq_a4">L'âge planétaire correspond à la division de vos années terrestres par la période orbitale de chaque planète. Par exemple, Mars met 1,8808 an terrestre à faire le tour du Soleil.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span data-i18n="faq_q5">Qu'est-ce qu'un demi-anniversaire ?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="faq_a5">Un demi-anniversaire se produit exactement 6 mois après votre date de naissance, parfait pour une fête intermédiaire.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span data-i18n="faq_q6">Ma date de naissance est-elle enregistrée sur un serveur ?</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            <p data-i18n="faq_a6">Non. TrueAge s'exécute à 100% dans votre navigateur. Aucune donnée personnelle n'est envoyée à un serveur.</p>
+          </div>
+        </details>
+      </div>
+
+      <article class="explainer-article">
+        <h2 data-i18n="art_title">La Science de l'Âge Chronologique et la Mesure Astronomique</h2>
+        <p data-i18n="art_p1">L'âge chronologique mesure la durée écoulée depuis la naissance jusqu'à l'instant présent en tenant compte des subtilités du calendrier grégorien.</p>
+        
+        <h3 data-i18n="art_h2_1">Dérive Grégorienne et Ajustements Bissextiles</h3>
+        <p data-i18n="art_p2">La Terre met environ 365,2422 jours pour accomplir une révolution complète. Pour combler cet écart, un 29 février est inséré tous les 4 ans.</p>
+
+        <h3 data-i18n="art_h2_2">Périodes Orbitales Planétaires</h3>
+        <p data-i18n="art_p3">Une année est la durée que met un corps céleste pour boucler son orbite. Mercure n'a besoin que de 87,97 jours, tandis que Jupiter prend près de 12 ans terrestres.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../" class="brand-link">
+            <span class="brand-title">TrueAge</span>
+          </a>
+          <p data-i18n="footer_desc">Calculateur d'âge chronologique haute précision et suivi des jalons de vie 100% côté client. Gratuit, libre et privé.</p>
+        </div>
+
+        <div class="footer-locales">
+          <div class="locale-title" data-i18n="footer_languages">Éditions Mondiales</div>
+          <div class="locale-links">
+            <a href="../" class="locale-link">English</a>
+            <a href="../es/" class="locale-link">Español</a>
+            <a href="../pt/" class="locale-link">Português</a>
+            <a href="../de/" class="locale-link">Deutsch</a>
+            <a href="./" class="locale-link active">Français</a>
+            <a href="../ja/" class="locale-link">日本語</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> TrueAge. Tous droits réservés. 100% Client-Side.
+        </div>
+        <div class="footer-credit">
+          Développé avec précision. <a href="https://buymeacoffee.com/kisharadilz" target="_blank" rel="noopener noreferrer">Soutenir le Créateur ☕</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../i18n.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>

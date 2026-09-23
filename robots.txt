@@ -1,0 +1,6 @@
+# robots.txt for https://trueage.github.io/
+User-agent: *
+Allow: /
+
+# XML Sitemap with localized hreflang targets
+Sitemap: https://trueage.github.io/sitemap.xml
