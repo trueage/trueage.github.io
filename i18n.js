@@ -564,7 +564,23 @@
     const canonicalUrl = lang === 'en' ? 'https://trueage.github.io/' : `https://trueage.github.io/${lang}/`;
     const ogImageUrl = 'https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png';
 
-    // 1. BreadcrumbList Schema
+    // 1. WebSite Schema (Google Site Name)
+    let webSiteScript = document.getElementById('schema-website');
+    if (!webSiteScript) {
+      webSiteScript = document.createElement('script');
+      webSiteScript.id = 'schema-website';
+      webSiteScript.type = 'application/ld+json';
+      webSiteScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TrueAge",
+        "alternateName": ["True Age Calculator", "ExactAge"],
+        "url": "https://trueage.github.io/"
+      }, null, 2);
+      document.head.appendChild(webSiteScript);
+    }
+
+    // 2. BreadcrumbList Schema
     let breadcrumbScript = document.getElementById('schema-breadcrumb');
     if (!breadcrumbScript) {
       breadcrumbScript = document.createElement('script');
