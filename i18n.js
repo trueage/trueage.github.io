@@ -620,13 +620,6 @@
       "softwareVersion": "1.0.0",
       "image": ogImageUrl,
       "screenshot": ogImageUrl,
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1280",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "offers": {
         "@type": "Offer",
         "price": "0",
