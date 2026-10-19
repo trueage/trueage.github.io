@@ -1,7 +1,7 @@
 /**
  * TrueAge | Exact Age Calculator & Milestone Tracker
  * High-Performance Vanilla ES6 Date Engine & 60FPS UI
- * Author: Kishara Dilshan (https://buymeacoffee.com/kisharadilz)
+ * Author: Kishara Dilshan (https://ko-fi.com/kishara)
  */
 
 (function () {
