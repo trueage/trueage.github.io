@@ -652,7 +652,7 @@
       "author": {
         "@type": "Person",
         "name": "Kishara Dilshan",
-        "url": "https://ko-fi.com/kishara"
+        "url": "https://kisharadilshan.gumroad.com/coffee"
       }
     };
     webAppScript.textContent = JSON.stringify(webAppData, null, 2);

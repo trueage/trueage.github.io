@@ -3,7 +3,7 @@
 > ⏱️ A 100% client-side, zero-server chronological age calculator and life milestone tracker built with pure HTML5, CSS3, and Vanilla ES6 JavaScript. Designed for high performance, accessibility, and Page 1 Google indexing across 6 languages.
 
 🌐 **Live URL**: [https://trueage.github.io/](https://trueage.github.io/)  
-☕ **Developer Support**: [Ko-fi](https://ko-fi.com/kishara)
+☕ **Developer Support**: [Support Developer](https://kisharadilshan.gumroad.com/coffee)
 
 ---
 
